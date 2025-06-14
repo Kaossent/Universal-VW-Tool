@@ -1,0 +1,39 @@
+.panel {
+    border-radius: 5px !important;
+    margin-top: 25px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: #2e3435 !important;
+    border-color: #2e3435 !important;
+}
+
+
+.panel-heading {
+    border-bottom: #141414 !important;
+}
+.panel-heading h2 {
+    color: white !important;
+}
+
+.panel-body {
+    color: white !important
+}
+
+.panel-body a {
+    color: #16cdef !important;
+}
+
+.panel-footer {
+    background-color: #2e3435 !important;
+    border-top: #141414 !important;
+}
+
+.navbar {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    display: flex;
+    align-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #2e3435 !important;
+    border-color: #2e3435 !important;
+}

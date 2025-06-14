@@ -1,0 +1,206 @@
+/* Класс success1 для изменения цвета */
+.btn {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    box-shadow: 0px 1px 10px 2px rgba(104, 103, 101, 0.164) !important;
+    box-shadow: inset 0px -4px 15px 1px rgba(59, 59, 58, 0.158)!important;
+}
+
+.btn.btn-success1 {
+    padding: 5px !important;
+    border-radius: 4px;
+    background-color: rgb(224, 185, 112) !important;
+    margin-left: 5px !important;
+    color: white !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn.btn-primary1 {
+    padding: 5px !important; 
+    border-radius: 4px; 
+    background-color: rgb(129, 112, 224) !important;
+    margin-left: 5px !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: white !important;
+}
+
+.btn.btn-info1 {
+    padding: 5px !important;
+    border-radius: 4px; 
+    background-color: rgb(149, 194, 184) !important;
+    margin-left: 5px !important;
+    color: white !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект при наведении */
+.success1:hover {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#top_servers_btn {
+    background: #64c3e2 !important;
+    border-radius: 5px !important;
+}
+
+.btn-info {
+    color: #b3b9c4;
+}
+
+button:hover {
+    transform: scale(1.1); 
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+select.form-control {
+    background-color: #c2c2c2; 
+    text-align: center !important;
+    font-weight: bold;
+    border: none !important; 
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-control {
+    color: rgb(128, 128, 128) !important;
+    background-color: #f3f3f3 !important;
+}
+
+input.form-control {
+    border-radius: 5px;
+    color: gray !important;
+}   
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: 2px #2e343b !important;
+}
+
+.info th {
+    border: 0px !important;
+    border-color: none;
+}
+
+.info th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.info th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.btn.btn-warning {
+    background-image: linear-gradient(to bottom, #ad1010, rgb(179, 0, 0) 100%) !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn.btn-default:hover {
+    background: gray !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-header {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.modal-content {
+    border-top-left-radius: 11px !important;
+    border-top-right-radius: 11px !important;
+    border-bottom-right-radius: 13px !important;
+    border-bottom-left-radius: 13px !important;
+    border: 0px !important;
+}
+
+.panel-body {
+    font-weight: bold;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+.btn-success {
+    border-radius: 5px !important;
+}
+
+.btn-info {
+    border-radius: 5px !important;
+}
+
+.btn-warning {
+    border: 0px !important;
+    border-radius: 5px !important;
+}
+
+.btn-default {
+    border: 0px !important;
+    text-shadow: none !important;
+    border-radius: 5px !important;
+    background: gray !important;
+    color: white !important;
+}
+
+#mr_ireason {
+    width: 252px !important;
+}
+
+#textInput.form-control {
+    width: 270px !important;
+    display: inline;
+}
+
+
+.navbar {
+    border-radius: 10px !important;
+    display: flex;
+    align-content: center;
+    max-width: 900px !important;
+    margin-top: 10px !important;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    border-radius: 10px !important;
+}
+
+.panel {
+    border-radius: 10px !important;
+    margin-top: 25px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 0px !important;
+}
+
+.wrap {
+    border-radius: 10px !important;
+    max-height: 500px !important;
+}
+
+.panel-footer {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+
+.pagination a {
+    background-color: #f3f3f3 !important;
+    border-color: #f3f3f3 !important;
+    color: gray !important;
+}
+
+.pagination li:first-child a,
+.pagination li:nth-child(2) a,
+.pagination li:last-child a,
+.pagination li:nth-last-child(2) a {
+    background-image: linear-gradient(to bottom,#f3f3f3 0,#f3f3f3 100%) !important;
+    border-color: #f3f3f3 !important;
+}
+.pagination li:first-child a {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.pagination li:last-child a {
+    border-bottom-right-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}

@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Universal VimeWorld Tool",
+    "version": "2.0",
+    "description": "Мощный инструмент с современным интерфейсом, поддержкой всех привилегий, тёмной и светлой темой, сотней фонов и полезными функциями, созданными для удобства модерирующего персонала",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://legacy-cp.vimeworld.com/*",
+          "https://forum.vimeworld.com/*",
+          "https://cp.vimeworld.com/*"
+        ],
+        "js": ["content.js"],
+        "css": ["legacy.css", "tooltip.css"]
+      }
+
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["config.json", "background.txt"],
+        "matches": ["<all_urls>"]
+      }
+
+    ],
+    "icons": {
+      "16": "16.png",
+      "64": "64.png",
+      "128": "128.png"
+    }
+  }
+  
