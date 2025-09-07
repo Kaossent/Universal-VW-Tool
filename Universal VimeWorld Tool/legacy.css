@@ -1,4 +1,3 @@
-/* Класс success1 для изменения цвета */
 .btn {
     transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -35,7 +34,6 @@
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Эффект при наведении */
 .success1:hover {
     transition: color 0.3s ease, background-color 0.3s ease;
 }

@@ -1,0 +1,175 @@
+#muteCalcToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff01;
+    background-image: url("https://i.ibb.co/8DSL5gy4/vimecalculator.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    text-indent: -9999px;
+}
+#muteCalcPanel {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 600px;
+    max-height: 800px;
+    overflow-y: auto;
+    background: #212529;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transform: translateY(120%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 9999;
+    padding: 10px;
+}
+#muteCalcPanel.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.button-clicked {
+    animation: pressAnim 0.15s ease;
+}
+
+@keyframes pressAnim {
+    0%   { transform: scale(1); box-shadow: none; }
+    50%  { transform: scale(0.9); box-shadow: inset 0 2px 6px rgba(0,0,0,0.5); }
+    100% { transform: scale(1); box-shadow: none; }
+}
+#muteCalcPanel button {
+    display: inline-block;
+    font-weight: bold;
+    margin: 3px;
+    padding: 6px 10px;
+    font-size: 13px;
+    background: #dd9126ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#muteCalcPanel button:hover:not(:disabled) {
+    background: #ffaa33;
+}
+#muteCalcPanel button:disabled {
+    background: #cc7a00;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+#muteCalcPanel button.special {
+    background: #b32424;
+}
+#muteCalcPanel button.special:hover {
+    background: #db2727ff;
+}
+#muteCalcReset {
+    background: #d9534f !important;
+    padding: 6px 12px;
+    font-weight: bold;
+    margin-left: 6px;
+    position: static; 
+}
+#muteCalcCopy {
+    background: #28a745 !important;
+    font-weight: bold;
+    padding: 6px 12px;
+    font-weight: bold;
+    margin-left: 6px; 
+    position: static; 
+}
+.muteCalcRow {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.muteCalcInfoRow {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 5px 0;
+}
+#muteCalcTotal, #muteCalcMatOsk {
+    margin: 0px;
+    font-weight: bold;
+    color: #ffbd5b;
+}
+#muteCalcTotal {
+    margin-left: 25px;
+    color: #5bb0ffff;
+}
+#muteCalcMatOsk {
+    text-align: left;
+    align-self: flex-start;
+    width: 75%; 
+    margin-left: 0px;
+}
+#muteCalcWarning {
+    display: none;
+    color: #ff4444;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#muteCalcResizer {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: nwse-resize;
+}
+
+.muteCalcInputsRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 5px 10px;
+}
+.muteCalcInput {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #333333;
+    background: #333333;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+.muteCalcInput:focus {
+    border-color: #ffbd5b;
+}
+#muteCalcTimeInput {
+    width: 80px;
+    text-align: center;
+}
+#muteCalcReasonInput {
+    flex: 1;
+}
+
+#muteCalcPanel button[data-tooltip] {
+    position: relative;
+}
+
+#muteCalcPanel button[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10000;
+    pointer-events: none;
+}

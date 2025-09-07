@@ -196,7 +196,108 @@ const emojiReplacements = {
     "偺": "\uD83D\uDE22", // плачущий
     "偻": "\uD83D\uDC80", // мертвый
     "偼": "\uD83D\uDE0D", // влюбленный
-    "偽": "\uD83D\uDE10"  // обычный
+    "偽": "\uD83D\uDE10",  // обычный
+
+    "傇": "\ud83d\udc30", // Кролик
+    "傇": "\ud83d\udc30", // Кролик плачет
+    "傉": "\ud83d\udc30", // Кролик влюбленный
+    "傊": "\ud83d\udc30", // Кролик плачет
+
+    "傐": "\ud83c\udf44", // гриб
+    "傑": "\ud83c\udf44", // грибы
+    "傒": "\ud83c\udf44", // мухомор
+    "傓": "\ud83c\udf44", // белый гриб
+
+    "傔": "\ud83e\uddf4", // розовое зелье
+    "傕": "\ud83e\uddf4", // зеленое зелье
+    "傖": "\ud83e\uddf4", // зелье в форме сердца
+    "傗": "\ud83e\uddf4", // зелье в форме триугольника
+
+    "傢": "\u26a0\ufe0f", // предупреждение 
+    "傡": "\u26d4", // нет выхода
+    "傠": "\ud83d\udeab", // запрещенно
+
+    "傜": "\ud83d\udc80", // красный скелет
+    "傝": "\ud83d\udc80", // скелет плачет
+    "傞": "\ud83d\udc80", // скелет
+    "傟": "\ud83d\udc80", // скелет влюбленный
+
+    "傘": "\ud83d\udd25", // Огонь синий
+    "備": "\ud83d\udd25", // Огонь зеленый
+    "傚": "\ud83d\udd25", // Огонь розовый
+    "傛": "\ud83d\udd25", // Огонь фиолетовый
+
+    "傣": "\ud83e\udd2e", // Рвота на лице
+    "傤": "\ud83e\udd2e", // Рвота радугой на лице
+    "傥": "\ud83e\udd2e", // Рвота серая на лице
+
+    "储": "\ud83d\ude0e", // Улыбающееся лицо в солнцезащитных очках
+    "傩": "\ud83e\udd20", // Смайл со шляпой
+    "傪": "\ud83e\udd20", // Улыбающийся смайл со шляпой
+    "傫": "\ud83e\udd2e", // Смайл со шляпой и рвотой
+
+    "傶": "\ud83d\udc8e", // Diamond
+    "債": "\u2666\ufe0f", // Gem red
+    "傮": "\u2666\ufe0f", // Gem green
+    "傭": "\u2666\ufe0f", // Gem yellow
+
+    "催": "\u2620\ufe0f", // skull and crossboness dark
+    "傯": "\ud83d\uddfa\ufe0f", // map
+    "傷": "\u2620\ufe0f", // skull and crossboness white
+    "傱": "\ud83d\ude33", // Flushed face
+    "傲": "\ud83d\ude0e", // Smiling face with sunglass
+    "傳": "\ud83d\ude01", // Beaming face with smiling 
+    "傴": "\ud83e\udd2e", // Рвота на лице
+    "僀": "\ud83d\udc41\ufe0f", // eye
+    "僁": "\ud83d\ude2d", // Loudly crying face
+    "僂": "\ud83d\udc98", // Сердце на цепях
+    "僃": "\ud83d\udc98", // Серое сердце на цепях  
+    "僄": "\ud83d\udcdc", // Свиток
+    "僅": "\ud83d\udc7b", // Призрак
+    // Kydze
+    "僇": "\ud83d\udc41\ufe0f\u200d\ud83d\udde8\ufe0f", // Страшный глаз
+    "僈": "\ud83d\udc26\u200d\u2b1b", // Ворона
+    "僉": "\ud83d\udd2a", // Нож
+    "僊": "\ud83e\udea6", // Могила
+    "僋": "\ud83c\udf19", // Кровавая луна
+    "僌": "\ud83d\udd4a\ufe0f", // Птица
+    "働": "\ud83d\udc51", // Нимб
+    "僎": "\ud83d\udd2e", // Что-то фиолетовое
+    "像": "\ud83d\udd90\ufe0f", // Красная рука
+    "僜": "\ud83d\ude04", // Улыбающийся анимешник
+    "僝": "\ud83e\udd28", // Анимешник с приподнятой бровью
+    "僞": "\ud83d\ude3c", // Синий кот
+    "僟": "\ud83d\ude11", // Анимешник с закрытыми глазами
+    "僔": "\ud83d\udd2e", // Магический шар
+    "僕": "\ud83d\udc51", // Корона
+    "僖": "\u2620\ufe0f", // Череп с костями
+    "僗": "\ud83d\udc52", // Соломенная шляпа
+    "僘": "\ud83d\udc69", // Анимешная женщина без глаз
+    "僙": "\ud83d\udd2a", // Кровавый нож
+    "僛": "\ud83d\udc41\ufe0f", //  Анимешный кровавый глаз
+    "僠": "\ud83d\ude2e", // Анимешник кричит
+    "僡": "\ud83d\ude0a", // Анимешник
+    "僢": "\ud83d\ude23", // Анимешник с открытым ртом и закрытыми глазами
+    "僣": "\ud83d\ude38", // Радостный кот
+    "儳": "\ud83d\udc7e", // Пришелец
+    "儴": "\ud83d\udc7d", // Пришелец приплюснутый
+    "儵": "\ud83d\udfe1", // Желтый круг
+    "儶": "\ud83d\udfe0", // Оранжевый круг
+    "儷": "\ud83d\udfe0", // Оранжевый круг с белыми полосками
+    "儸": "\ud83c\udf0f", // Планета земля
+    "儹": "\ud83e\ude90", // Марс
+    "儺": "\ud83d\udef8", // НЛО
+    "儻": "\ud83d\udd73\ufe0f", // Черная дыра
+    "儼": "\ud83e\ude90", // Сатурн
+    "儽": "\ud83d\ude80", // Ракета
+    "儾": "\ud83c\udf11", // Полнолуние 
+    "儿": "\ud83d\udef8", // Планета земля 2
+    "兀": "\ud83e\udde8", // Петарда
+    "儯": "\ud83d\udc7e", // Пришелец 2
+    "儰": "\ud83d\udc7e", // Пришелец 3
+    "儱": "\ud83d\udc7e", // Пришелец 4
+    "儲": "\ud83d\udc7e", // Пришелец 5
+    "僆": "\ud83d\udc1a", // Ракушка
 };
 
     let lastValue = '';
@@ -825,7 +926,6 @@ function fetchUserData(name) {
 }
 
 
-
 function formatColor(color) {
     if (!color) return null;
     color = color.trim().toLowerCase();
@@ -1135,161 +1235,602 @@ function rowClass() {
     });
 }
 
-function styleViolatorAndReporter() {
-  chrome.storage.sync.get({ isEnabled3: true }, (data) => {
-    if (!data.isEnabled3) return;
+let styleTimeout = null;
+let isStyling = false;
+let modalObserver = null;
+const observerConfig = { childList: true, subtree: true, characterData: true, attributes: true };
 
-    const violatorEl = document.getElementById("mr_violator");
-    const reporterEl = document.getElementById("mr_reporter");
-    const moderEl = document.getElementById("mr_alert_muted_moder");
+function getStorageAsync(defaults) {
+  return new Promise(resolve => chrome.storage.sync.get(defaults, resolve));
+}
 
-    function extractUsername(rawText) {
-      if (!rawText) return null;
-      const cleaned = rawText.replace(/\[.*?\]/g, '').trim();
-      const parts = cleaned.split(/\s+/);
-      return parts.pop();
-    }
+async function styleViolatorAndReporter() {
+  const data = await getStorageAsync({ isEnabled3: true });
+  if (!data.isEnabled3) return;
 
-    if (violatorEl) {
+  function extractUsername(rawText) {
+    if (!rawText) return null;
+    const cleaned = rawText.replace(/\[.*?\]/g, '').trim();
+    const parts = cleaned.split(/\s+/);
+    return parts.pop();
+  }
+
+  const violatorEl = document.getElementById("mr_violator");
+  const reporterEl = document.getElementById("mr_reporter");
+  const moderEl = document.getElementById("mr_alert_muted_moder");
+  const deletedModerEl = document.getElementById("mr_alert_deleted_moder");
+  const mutedBlock = document.getElementById("mr_alert_muted");
+  const deletedBlock = document.getElementById("mr_alert_deleted");
+  const durationEl = document.getElementById("mr_alert_muted_duration");
+
+  const tasks = [];
+
+  if (violatorEl) {
+    tasks.push((async () => {
       const span = violatorEl.querySelector('span');
       const name = extractUsername(span ? span.textContent : violatorEl.textContent);
-      fetchUserData(name).then(user => {
-        if (user && isValidRank(user.rank)) {
-          const rankInfo = getRankInfoReporter(user.rank);
-          if (rankInfo) {
-            violatorEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
-            applyGradient(violatorEl, user.customColors || [], rankInfo.defaultColor);
-          }
+      if (!name) return;
+      const user = await fetchUserData(name);
+      if (user && isValidRank(user.rank)) {
+        const rankInfo = getRankInfoReporter(user.rank);
+        if (rankInfo) {
+          violatorEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
+          applyGradient(violatorEl, user.customColors || [], rankInfo.defaultColor);
         }
-      });
-    }
+      }
+    })());
+  }
 
-    if (reporterEl) {
+  if (reporterEl) {
+    tasks.push((async () => {
       const name = reporterEl.textContent.trim();
-      fetchUserData(name).then(user => {
-        if (user && isValidRank(user.rank)) {
-          const rankInfo = getRankInfoReporter(user.rank);
-          if (rankInfo) {
-            reporterEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
-            applyGradient(reporterEl, user.customColors || [], rankInfo.defaultColor);
-          }
+      if (!name) return;
+      const user = await fetchUserData(name);
+      if (user && isValidRank(user.rank)) {
+        const rankInfo = getRankInfoReporter(user.rank);
+        if (rankInfo) {
+          reporterEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
+          applyGradient(reporterEl, user.customColors || [], rankInfo.defaultColor);
         }
-      });
-    }
+      }
+    })());
+  }
 
-    if (moderEl) {
+  if (moderEl) {
+    tasks.push((async () => {
       const name = extractUsername(moderEl.textContent.trim());
-      fetchUserData(name).then(user => {
-        if (user && isValidRank(user.rank)) {
-          const rankInfo = getRankInfoReporter(user.rank);
-          if (rankInfo) {
-            moderEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
-            applyGradient(moderEl, user.customColors || [], rankInfo.defaultColor);
-          }
+      if (!name) return;
+      const user = await fetchUserData(name);
+      if (user && isValidRank(user.rank)) {
+        const rankInfo = getRankInfoReporter(user.rank);
+        if (rankInfo) {
+          moderEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
+          applyGradient(moderEl, user.customColors || [], rankInfo.defaultColor);
         }
-      });
-    }
+      }
+    })());
+  }
 
-    const mutedBlock = document.getElementById("mr_alert_muted");
-    if (mutedBlock && moderEl) {
-      const childNodes = Array.from(mutedBlock.childNodes);
-      for (const node of childNodes) {
-        if (node.nodeType === Node.TEXT_NODE && node.textContent.includes("Модератор")) {
-          node.textContent = node.textContent.replace("Модератор", "").trim();
+  if (deletedModerEl) {
+    tasks.push((async () => {
+      const name = extractUsername(deletedModerEl.textContent.trim());
+      if (!name) return;
+      const user = await fetchUserData(name);
+      if (user && isValidRank(user.rank)) {
+        const rankInfo = getRankInfoReporter(user.rank);
+        if (rankInfo) {
+          deletedModerEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
+          applyGradient(deletedModerEl, user.customColors || [], rankInfo.defaultColor);
+        }
+      }
+    })());
+  }
+
+  if (mutedBlock && moderEl) {
+    const childNodes = Array.from(mutedBlock.childNodes);
+    for (const node of childNodes) {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.includes("Модератор")) {
+        node.textContent = node.textContent.replace("Модератор", "").trim();
+      }
+    }
+  }
+
+  if (deletedBlock && deletedModerEl) {
+    const childNodes = Array.from(deletedBlock.childNodes);
+    for (let i = 0; i < childNodes.length; i++) {
+      const node = childNodes[i];
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.includes("модератором")) {
+        node.textContent = node.textContent.replace("модератором", "").trim();
+        const next = childNodes[i + 1];
+        if (next && next.nodeType === Node.ELEMENT_NODE && next.tagName === "B") {
+          node.textContent += " ";
         }
       }
     }
+  }
 
-    const deletedModerEl = document.getElementById("mr_alert_deleted_moder");
-    if (deletedModerEl) {
-      const name = extractUsername(deletedModerEl.textContent.trim());
-      fetchUserData(name).then(user => {
-        if (user && isValidRank(user.rank)) {
-          const rankInfo = getRankInfoReporter(user.rank);
-          if (rankInfo) {
-            deletedModerEl.textContent = `${user.prefix ? `[${user.prefix}]` : rankInfo.label} ${user.username}`;
-            applyGradient(deletedModerEl, user.customColors || [], rankInfo.defaultColor);
-          }
-        }
-      });
-    }
-
-    const deletedBlock = document.getElementById("mr_alert_deleted");
-    if (deletedBlock && deletedModerEl) {
-    const childNodes = Array.from(deletedBlock.childNodes);
-    for (let i = 0; i < childNodes.length; i++) {
-        const node = childNodes[i];
-
-        if (node.nodeType === Node.TEXT_NODE && node.textContent.includes("модератором")) {
-        node.textContent = node.textContent.replace("модератором", "").trim();
-
-        const next = childNodes[i + 1];
-        if (next && next.nodeType === Node.ELEMENT_NODE && next.tagName === "B") {
-            node.textContent += " ";
-        }
-        }
-    }
-    }
-
-  });
-
-    const durationEl = document.getElementById("mr_alert_muted_duration");
-    if (durationEl) {
+  if (durationEl) {
     const minutes = parseInt(durationEl.textContent.trim(), 10);
     if (!isNaN(minutes)) {
-        const days = Math.floor(minutes / 1440);
-        const hours = Math.floor((minutes % 1440) / 60);
-        const mins = minutes % 60;
+      const days = Math.floor(minutes / 1440);
+      const hours = Math.floor((minutes % 1440) / 60);
+      const mins = minutes % 60;
 
-        let readable = [];
-        if (days > 0) readable.push(`${days} дн.`);
-        if (hours > 0) readable.push(`${hours} ч.`);
-        if (mins > 0 || (days === 0 && hours === 0)) readable.push(`${mins} мин.`);
+      let readable = [];
+      if (days > 0) readable.push(`${days} дн.`);
+      if (hours > 0) readable.push(`${hours} ч.`);
+      if (mins > 0 || (days === 0 && hours === 0)) readable.push(`${mins} мин.`);
 
-        durationEl.textContent = `(${readable.join(" ")}) ${minutes} `;
+      durationEl.textContent = `(${readable.join(" ")}) ${minutes} `;
     }
-    }
+  }
+
+  await Promise.all(tasks);
 }
 
-const modalObserver = new MutationObserver(() => {
+function scheduleStyle() {
+  if (styleTimeout) clearTimeout(styleTimeout);
+  styleTimeout = setTimeout(() => {
     const violator = document.getElementById("mr_violator");
     const reporter = document.getElementById("mr_reporter");
 
-    if (violator && reporter) {
-        styleViolatorAndReporter();
-    }
-});
+    if (!(violator && reporter)) return;
+    if (isStyling) return;
 
-modalObserver.observe(document.body, {
-    childList: true,
-    subtree: true
-});
+    modalObserver.disconnect();
+    isStyling = true;
 
-function waitForTable(callback) {
-    const table = document.querySelector('#table');
-    if (table) {
-        callback();
-        return;
-    }
-
-    console.log('Table not found, setting up MutationObserver');
-    const observer = new MutationObserver((mutations, obs) => {
-        const table = document.querySelector('#table');
-        if (table) {
-            obs.disconnect();
-            callback();
-        }
-    });
-
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-
-    setTimeout(() => {
-        observer.disconnect();
-    }, 10000);
+    styleViolatorAndReporter()
+      .catch(err => console.error("styleViolatorAndReporter error:", err))
+      .finally(() => {
+        isStyling = false;
+        setTimeout(() => {
+          modalObserver.observe(document.body, observerConfig);
+        }, 150);
+      });
+  }, 100);
 }
+
+modalObserver = new MutationObserver((mutations) => {
+  let relevant = false;
+  for (const m of mutations) {
+    if (m.type === "childList") {
+      if (m.addedNodes && m.addedNodes.length > 0) {
+        for (const n of m.addedNodes) {
+          if (n.nodeType === 1) {
+            if (n.id === "mr_violator" || n.id === "mr_reporter" || (n.querySelector && (n.querySelector("#mr_violator") || n.querySelector("#mr_reporter")))) {
+              relevant = true;
+              break;
+            }
+          }
+        }
+      }
+    }
+    if (m.type === "characterData" || m.type === "attributes") {
+      relevant = true;
+    }
+    if (relevant) break;
+  }
+
+  if (relevant) scheduleStyle();
+});
+
+try {
+  modalObserver.observe(document.body, observerConfig);
+} catch (e) {
+  document.addEventListener("DOMContentLoaded", () => {
+    modalObserver.observe(document.body, observerConfig);
+  });
+}
+
+
+// Калькулятор мутов 
+(function () {
+  chrome.storage.sync.get({ isEnabled2: true }, (data) => {
+  // темная тема
+  if (!data.isEnabled2) {
+    const style = document.createElement("style");
+    style.textContent = `
+      #muteCalcPanel {
+        background: #ffffff !important;
+        color: #000 !important;
+      }
+
+      .muteCalcInput {
+        background: #f9f9f9 !important;
+        border: 1px solid #ccc !important;
+        color: #000 !important;
+      }
+      #muteCalcPanel button:disabled {
+        background: #b86e00a4;
+      }
+      #muteCalcPanel button[data-tooltip]:hover::after {
+        background: #555 !important;
+        color: #fff !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+});
+
+  // Кнопка открытия
+  const toggle = document.createElement("button");
+  toggle.id = "muteCalcToggle";
+  document.body.appendChild(toggle);
+
+  // Панель
+  const panel = document.createElement("div");
+  panel.id = "muteCalcPanel";
+  document.body.appendChild(panel);
+
+  let totalMinutes = 0;
+  let matOskSum = 0;
+  let hasPolitics = false;
+  let reasonsList = new Set();
+
+  const warning = document.createElement("div");
+  warning.id = "muteCalcWarning";
+  warning.textContent = "Не забудьте забанить / подать жалобу на игрока!";
+  panel.appendChild(warning);
+
+  //Поля Время и Причина 
+  const inputsRow = document.createElement("div");
+  inputsRow.className = "muteCalcInputsRow";
+
+  const timeInput = document.createElement("input");
+  timeInput.type = "text";
+  timeInput.id = "muteCalcTimeInput";
+  timeInput.className = "muteCalcInput";
+  timeInput.placeholder = "Время";
+  inputsRow.appendChild(timeInput);
+
+  const reasonInput = document.createElement("input");
+  reasonInput.type = "text";
+  reasonInput.id = "muteCalcReasonInput";
+  reasonInput.className = "muteCalcInput";
+  reasonInput.placeholder = "Причина";
+  inputsRow.appendChild(reasonInput);
+
+  panel.appendChild(inputsRow);
+
+  // Подпись времени
+  const totalLabel = document.createElement("div");
+  totalLabel.id = "muteCalcTotal";
+  totalLabel.textContent = `0 дн. 0 ч.`;
+
+  const matOskLabel = document.createElement("div");
+  matOskLabel.id = "muteCalcMatOsk";
+  matOskLabel.textContent = `Неадекватное поведение: 0 / 1440`;
+
+  const infoRow = document.createElement("div");
+  infoRow.className = "muteCalcInfoRow";
+
+  infoRow.appendChild(totalLabel);
+  infoRow.appendChild(matOskLabel);
+
+  panel.appendChild(infoRow);
+
+
+  //Восстановление состояния из localStorage
+  function loadState() {
+    const saved = localStorage.getItem("muteCalcState");
+    if (!saved) return;
+    try {
+      const state = JSON.parse(saved);
+      if (state.left) panel.style.left = state.left;
+      if (state.top) panel.style.top = state.top;
+      if (state.width) panel.style.width = state.width;
+      if (state.height) panel.style.height = state.height;
+      if (state.active) panel.classList.add("active");
+    } catch (e) {}
+  }
+
+  function saveState() {
+    const state = {
+      left: panel.style.left || "",
+      top: panel.style.top || "",
+      width: panel.style.width || "",
+      height: panel.style.height || "",
+      active: panel.classList.contains("active"),
+    };
+    localStorage.setItem("muteCalcState", JSON.stringify(state));
+  }
+
+  loadState();
+
+  function formatTime(minutes) {
+    const days = Math.floor(minutes / 1440);
+    const hours = Math.floor((minutes % 1440) / 60);
+    return `${days} дн. ${hours} ч.`;
+  }
+
+  function updateFields() {
+    const extTime = document.getElementById("mr_itime");
+    if (extTime) extTime.value = totalMinutes > 0 ? totalMinutes : "";
+
+    const extReason = document.getElementById("mr_ireason");
+
+    let reasonStr = "";
+    if (reasonsList.size >= 5) {
+      reasonStr = "Многочисленные нарушения";
+    } else {
+      reasonStr = [...reasonsList].join(" + ");
+    }
+
+    if (extReason) extReason.value = reasonStr;
+
+    timeInput.value = totalMinutes > 0 ? totalMinutes : "";
+    reasonInput.value = reasonStr;
+    totalLabel.textContent = formatTime(totalMinutes);
+
+    if (hasPolitics) {
+      matOskLabel.textContent = `Неадекватное поведение: 2880 / 1440`;
+    } else {
+      matOskLabel.textContent = `Неадекватное поведение: ${matOskSum} / 1440`;
+    }
+  }
+
+    //Drag & Drop 
+  function enableDragAndDrop(container) {
+    let dragged;
+
+    container.addEventListener("dragstart", e => {
+      if (e.target.tagName === "BUTTON") {
+        dragged = e.target;
+        e.dataTransfer.effectAllowed = "move";
+      }
+    });
+
+    container.addEventListener("dragover", e => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      const target = e.target;
+      if (target.tagName === "BUTTON" && target !== dragged) {
+        const rect = target.getBoundingClientRect();
+        const offset = e.clientY - rect.top;
+        if (offset > rect.height / 2) {
+          target.after(dragged);
+        } else {
+          target.before(dragged);
+        }
+      }
+    });
+
+    container.addEventListener("drop", e => {
+      e.preventDefault();
+      saveButtonsOrder(container);
+    });
+  }
+
+  // Сохраняем порядок кнопок
+  function saveButtonsOrder(container) {
+    const order = [...container.querySelectorAll("button")].map(b => b.textContent);
+    localStorage.setItem("muteCalcButtonsOrder", JSON.stringify(order));
+  }
+
+  // Восстанавливаем порядок кнопок
+  function restoreButtonsOrder(container) {
+    const saved = localStorage.getItem("muteCalcButtonsOrder");
+    if (!saved) return;
+    try {
+      const order = JSON.parse(saved);
+      const buttons = [...container.querySelectorAll("button")];
+      order.forEach(text => {
+        const btn = buttons.find(b => b.textContent === text);
+        if (btn) container.appendChild(btn);
+      });
+    } catch {}
+  }
+
+  function addReason(reason) {
+    if (["Мат/Аморал", "Оскорбление игроков", "Оскорбление игроков + Мат","Политическая агитация"].includes(reason)) {
+      reasonsList.add("Неадекватное поведение");
+    } else {
+      reasonsList.add(reason);
+    }
+  }
+
+  function addMinutes(btn, minutes, reason, type = null, isSpecial = false) {
+    if (btn.disabled) return;
+
+    if (reason === "Политическая агитация") {
+      totalMinutes -= matOskSum;
+      matOskSum = 0;
+      hasPolitics = true;
+      totalMinutes += 2880;
+      // блокируем кнопки Неадекватное поведение
+      [matBtn, oskBtn, matOskBtn].forEach(b => b && (b.disabled = true));
+      addReason(reason);
+      btn.disabled = true;
+      updateFields();
+      return;
+    }
+
+    if (type === "mat" || type === "osk" || type === "matosk") {
+      if (hasPolitics) return;
+      let newSum = matOskSum + minutes;
+      addReason(reason);
+      if (newSum >= 1440) {
+        const add = 1440 - matOskSum;
+        totalMinutes += add;
+        matOskSum = 1440;
+        // блокируем кнопки Неадекватное поведение
+        [matBtn, oskBtn, matOskBtn].forEach(b => b && (b.disabled = true));
+      } else {
+        totalMinutes += minutes;
+        matOskSum = newSum;
+      }
+    } else if (type === "flood") {
+      totalMinutes += minutes;
+      addReason(reason);
+      floodBtn.disabled = true;
+      floodSymBtn.disabled = true;
+    } else {
+      totalMinutes += minutes;
+      addReason(reason);
+      btn.disabled = true;
+    }
+
+    if (isSpecial) {
+      warning.style.display = "block";
+    }
+    updateFields();
+  }
+
+  // Причины
+  const reasons = [
+    ["Flood", 60, "flood"],
+    ["Flood символами", 60, "flood"],
+    ["Caps Lock", 60],
+    ["Мат/Аморал", 120, "mat"],
+    ["Оскорбление игроков", 240, "osk"],
+    ["Оскорбление игроков + Мат", 360, "matosk"],
+    ["Оскорбление родственников", 2880],
+    ["Оскорбление Персонала", 21600],
+    ["Неуважительное общение с Персоналом", 21600],
+    ["Оскорбление Администрации", 43200],
+    ["Неуважительное общение с Администрацией", 43200],
+    ["Оскорбление проекта", 43200],
+    ["Выдача себя за Персонал", 2880],
+    ["Выдача себя за Администрацию", 10080],
+    ["Пиар сторонних ресурсов", 2880],
+    ["Реклама другого проекта", 10080],
+    ["Оффтоп", 1440],
+    ["Политическая агитация", 2880],
+    ["Обман игроков", 240],
+    ["Призыв к суициду", 240],
+    ["Продажа вимеров", 2880],
+    ["Покупка вимеров", 2880],
+    ["Продажа услуг за вимеры", 21600],
+    ["Продажа неигровых вещей за вимеры", 21600],
+    ["Продажа вещей за реальные деньги", 43200],
+    ["Продажа услуг за реальные деньги", 43200],
+    ["Продажа аккаунта", 1440, null, true],
+    ["Покупка аккаунта", 1440, null, true],
+    ["Передача аккаунта", 1440, null, true],
+    ["Пропаганда наркотиков", 1440, null, true],
+    ["Пропаганда фашизма", 1440, null, true],
+    ["Провокация игроков", 1440, null, true],
+    ["Распространение читов", 1440, null, true],
+    ["Распространение багов", 1440, null, true],
+  ];
+
+  let matBtn, oskBtn, matOskBtn, floodBtn, floodSymBtn;
+
+  reasons.forEach(([text, minutes, type, special]) => {
+    const btn = document.createElement("button");
+    btn.textContent = text;
+    btn.setAttribute("data-tooltip", `+${minutes} минут`);
+    btn.draggable = true;
+    if (special) btn.classList.add("special");
+    btn.addEventListener("click", () => {
+      btn.classList.add("button-clicked");
+      setTimeout(() => btn.classList.remove("button-clicked"), 150);
+
+      addMinutes(btn, minutes, text, type, special);
+    });
+
+    panel.appendChild(btn);
+
+      if (type === "mat") matBtn = btn;
+      if (type === "osk") oskBtn = btn;
+      if (type === "matosk") matOskBtn = btn;
+      if (text === "Flood") floodBtn = btn;
+      if (text === "Flood символами") floodSymBtn = btn;
+    });
+  
+  enableDragAndDrop(panel);
+  restoreButtonsOrder(panel);
+
+
+  // COPY
+  const copyBtn = document.createElement("button");
+  copyBtn.id = "muteCalcCopy";
+  copyBtn.textContent = "COPY";
+  copyBtn.onclick = () => {
+    const text = `${totalMinutes} ${reasonInput.value}`;
+    navigator.clipboard.writeText(text).then(() => {
+      copyBtn.textContent = "OK!";
+      setTimeout(() => (copyBtn.textContent = "COPY"), 1500);
+    });
+  };
+  inputsRow.appendChild(copyBtn);
+
+  // RESET
+  const resetBtn = document.createElement("button");
+  resetBtn.id = "muteCalcReset";
+  resetBtn.textContent = "RESET";
+  resetBtn.onclick = () => {
+    totalMinutes = 0;
+    matOskSum = 0;
+    hasPolitics = false;
+    reasonsList.clear();
+    updateFields();
+    warning.style.display = "none";
+    panel.querySelectorAll("button").forEach(b => {
+      if (b.id !== "muteCalcReset" && b.id !== "muteCalcCopy") b.disabled = false;
+    });
+
+    resetBtn.textContent = "OK!";
+    setTimeout(() => (resetBtn.textContent = "RESET"), 1500);
+  };
+  inputsRow.appendChild(resetBtn);
+
+  // Переключение панели
+  toggle.addEventListener("click", () => {
+    panel.classList.toggle("active");
+    saveState();
+  });
+
+  // Drag 
+  let isDragging = false;
+  let offsetX, offsetY;
+  panel.addEventListener("mousedown", (e) => {
+    if (e.target.tagName !== "BUTTON" && e.target.id !== "muteCalcResizer" && e.target.tagName !== "INPUT") {
+      isDragging = true;
+      offsetX = e.clientX - panel.getBoundingClientRect().left;
+      offsetY = e.clientY - panel.getBoundingClientRect().top;
+      panel.style.transition = "none";
+    }
+  });
+  document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      panel.style.left = (e.clientX - offsetX) + "px";
+      panel.style.top = (e.clientY - offsetY) + "px";
+      panel.style.right = "auto";
+      panel.style.bottom = "auto";
+      panel.style.position = "fixed";
+      saveState();
+    }
+  });
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    panel.style.transition = "";
+  });
+
+  // Resize 
+  const resizer = document.createElement("div");
+  resizer.id = "muteCalcResizer";
+  panel.appendChild(resizer);
+
+  let isResizing = false;
+  resizer.addEventListener("mousedown", (e) => {
+    isResizing = true;
+    e.preventDefault();
+    e.stopPropagation();
+  });
+  document.addEventListener("mousemove", (e) => {
+    if (isResizing) {
+      const rect = panel.getBoundingClientRect();
+      panel.style.width = (e.clientX - rect.left) + "px";
+      panel.style.height = (e.clientY - rect.top) + "px";
+      saveState();
+    }
+  });
+  document.addEventListener("mouseup", () => {
+    isResizing = false;
+  });
+})();
 
 let API_TOKEN = null;
 let tokenLoaded = false;

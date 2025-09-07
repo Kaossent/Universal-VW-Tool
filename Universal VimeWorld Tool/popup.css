@@ -1,21 +1,21 @@
-/* style.css */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     border-radius: 150px;
-    background-color: #000000;
+    margin: 0;
+    background-color: #2f2f2f;
     font-family: Arial, sans-serif;
   }
   
   .card {
-    width: 240px;
-    max-height: 220px;
-    background-color: #2f2f2f;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 10px auto; 
+      width: 240px;
+      max-height: 360px;
+      background-color: #2f2f2f;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .header {
@@ -96,7 +96,6 @@ body {
     transform: translateX(26px);
   }
 
-  /* styles.css */
 .styled-button {
   padding: 10px 20px;
   font-size: 16px;
@@ -164,10 +163,34 @@ button {
   transform: scale(1.05);
 }
 
-/* Дополнительные эффекты для нажатия */
 button:active {
   transform: scale(0.95);
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 6px; 
+}
+
+.buttons-container button {
+  flex: 1;
+  max-width: 48%;
+  font-size: 12px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.section-title {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
 
   
