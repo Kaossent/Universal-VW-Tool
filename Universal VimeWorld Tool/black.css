@@ -27,7 +27,7 @@
     border-top: #141414 !important;
 }
 
-.navbar {
+body.vw-legacy-cp .navbar {
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
     display: flex;

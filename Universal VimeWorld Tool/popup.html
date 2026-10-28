@@ -14,16 +14,34 @@
       <span class="title">Universal VimeWorld Tool</span>
     </div>
 
+    <div class="section-title" style="margin-top: 0;">Оформление</div>
+
     <div class="toggle-container">
-      <span class="toggle-label">Фон</span>
+      <div class="label-wrapper">
+        <span class="toggle-label">Случайный фон</span>
+        <span class="info-icon" data-tooltip="Заменяет стандартный фон страницы на случайную картинку. Если ниже загружен ваш личный файл, будет отображаться он.">?</span>
+      </div>
       <label class="toggle-switch">
         <input type="checkbox" id="toggleSwitch">
         <span class="slider"></span>
       </label>
     </div>
 
+    <div class="token-container" style="padding: 10px 0; border-bottom: 1px solid #3c3c3c;">
+      <input type="file" id="fileInput" accept="image/*" style="display: none;">
+      
+      <button id="uploadBtn" class="btn-info1" style="width: 100%; margin-bottom: 8px; background-color: #6f42c1;">Загрузить свой фон</button>
+      
+      <button id="resetCustomBg" class="btn-info1" style="width: 100%; background-color: #6c757d;">Удалить мой фон</button>
+      
+      <div id="bgStatus" style="font-size: 11px; margin-top: 8px; min-height: 14px; text-align: center;"></div>
+    </div>
+
     <div class="toggle-container">
-      <span class="toggle-label">Тёмная тема</span>
+      <div class="label-wrapper">
+        <span class="toggle-label">Тёмная тема</span>
+        <span class="info-icon" data-tooltip="Включает стильный тёмный дизайн для таблицы репортов и всплывающих окон.">?</span>
+      </div>
       <label class="toggle-switch">
         <input type="checkbox" id="toggleSwitch2">
         <span class="slider"></span>
@@ -31,17 +49,144 @@
     </div>
 
     <div class="toggle-container">
-      <span class="toggle-label">Привилегии</span>
+      <div class="label-wrapper">
+        <span class="toggle-label">Привилегии</span>
+        <span class="info-icon" data-tooltip="Добавляет поддержку новых привилегий от Immortal и выше, а так же префиксы и кастомные градиенты ников игроков.">?</span>
+      </div>
       <label class="toggle-switch">
         <input type="checkbox" id="toggleSwitch3">
         <span class="slider"></span>
       </label>
     </div>
+
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Статус онлайна</span>
+        <span class="info-icon" data-tooltip="Показывает цветной кружок рядом с ником. Зеленый = в игре, красный = оффлайн. При наведении на кружок отображает статус.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleOnlineStatus">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Головы игроков</span>
+        <span class="info-icon" data-tooltip="Загружает миниатюрные 2D-лица скинов игроков прямо в таблицу репортов.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleHeads">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Компактная рамка</span>
+        <span class="info-icon" data-tooltip="Делает плашку о выданном муте/отклоненном репорте (внутри репорта) компактнее.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleCompactMode">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Таймер размута</span>
+        <span class="info-icon" data-tooltip="Добавляет дату и время выдачи мута, а так же обратный отсчет, показывающий, сколько времени осталось до его окончания.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleUnmuteTime">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Сервер сообщения</span>
+        <span class="info-icon" data-tooltip="Отображает точный сервер (например, [LOBBY_2]), где было написано сообщение в чате.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleServerInfo">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="section-title">Словарь нарушений</div>
+
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Подсветка нарушений</span>
+        <span class="info-icon" data-tooltip="Автоматически подчеркивает маты, оскорбления и другие нарушения в чате разными цветами в соотвествии с цветами словаря. При наведении на слово выводит доплнительную информацию/описание.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleDictHighlight">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container" style="flex-wrap: wrap;">
+      <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+        <div class="label-wrapper">
+          <span class="toggle-label">Глубина поиска</span>
+          <span class="info-icon" data-tooltip="Допуск лишних символов (опечаток) в конце слова. Например, при значении '3' найдет 'залупаъъъ'. Чем выше значение — тем больше вариантов учитывается, но увеличивается и число ложных срабатываний. Рекомендуемое значение — 3">?</span>
+        </div>
+        <input type="number" id="dictFuzzyDepth" min="0" max="10" value="3" style="width: 45px; background: #444; border: none; color: white; border-radius: 4px; padding: 2px 5px; text-align: center; font-weight: bold;">
+      </div>
+    </div>
+
+    <div class="section-title">API Токен</div>
+
+    <div class="token-container" style="padding: 10px 0;">
+      <div style="position: relative; display: flex; align-items: center;">
+        <input type="password" id="tokenInput" placeholder="Вставьте токен или ссылку..." style="width: 100%; background: #444; border: 1px solid #555; color: white; border-radius: 4px; padding: 6px 30px 6px 6px; box-sizing: border-box; font-size: 12px; outline: none;">
+        
+        <span id="toggleTokenVisibility" style="position: absolute; right: 8px; cursor: pointer; font-size: 14px; opacity: 0.7; transition: opacity 0.2s; user-select: none;" title="Показать/Скрыть">👁️</span>
+      </div>
+      
+      <div id="tokenStatus" style="font-size: 11px; margin-top: 5px; min-height: 14px;"></div>
+      <button id="saveToken" class="btn-info1" style="width: 100%; margin-top: 8px;">Сохранить токен</button>
+    </div>
+
+    <div class="section-title">Уведомления</div>
+    
+    <div class="toggle-container">
+      <div class="label-wrapper">
+        <span class="toggle-label">Уведомления</span>
+        <span class="info-icon" data-tooltip="Включает систему фонового поиска новых репортов. Если отключить, расширение полностью перестанет делать запросы на сервер.">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleNotifications">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container" id="autoReloadContainer" style="transition: opacity 0.3s;">
+      <div class="label-wrapper">
+        <span class="toggle-label">Авто-обновление</span>
+        <span class="info-icon" data-tooltip="Обновляет страницу после появления нового репорта (Работает только если включены Уведомления).">?</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleAutoReload">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="slider-container" id="volumeContainer" style="transition: opacity 0.3s;">
+      <div class="label-wrapper">
+        <span class="toggle-label">Громкость</span>
+        <span class="info-icon" data-tooltip="Настраивает громкость звуковых уведомлений (Работает только если включены Уведомления).">?</span>
+      </div>
+      <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+    </div>
+
     <div class="section-title">Калькулятор</div>
 
     <div class="buttons-container">
-      <button class="btn-success1" id="resetButtons">Сброс кнопок</button>
-      <button class="btn-info1" id="resetState">Сброс положения</button>
+      <button class="btn-success1" id="resetButtons" title="Сбрасывает порядок кнопок в калькуляторе к изначальному">Сброс кнопок</button>
+      <button class="btn-info1" id="resetState" title="Возвращает окно калькулятора в правый нижний угол">Сброс позиции</button>
     </div>
   </div>
 </body>

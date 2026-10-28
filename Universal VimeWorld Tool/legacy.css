@@ -44,14 +44,19 @@
 }
 
 .btn-info {
-    color: #b3b9c4;
+    background-color: #2196f3 !important; 
+    color: #ffffff !important;           
+    border-radius: 5px !important;       
+    border: 0px !important;              
+    background-image: linear-gradient(to bottom, #4ea7f0 0, #2196f3 100%) !important; 
 }
 
-button:hover {
+body.vw-legacy-cp button:hover {
     transform: scale(1.1); 
     transition: background 0.3s ease, transform 0.2s ease;
 }
-select.form-control {
+
+body.vw-legacy-cp select.form-control {
     background-color: #c2c2c2; 
     text-align: center !important;
     font-weight: bold;
@@ -60,40 +65,119 @@ select.form-control {
     border-radius: 5px;
     cursor: pointer;
 }
-.form-control {
+
+body.vw-legacy-cp .form-control {
     color: rgb(128, 128, 128) !important;
     background-color: #f3f3f3 !important;
 }
 
-input.form-control {
+body.vw-legacy-cp input.form-control {
     border-radius: 5px;
     color: gray !important;
 }   
+
+#textInput.form-control {
+    width: 270px !important;
+    display: inline;
+}
+
+body.vw-legacy-cp .btn.btn-warning {
+    background-image: linear-gradient(to bottom, #ad1010, rgb(179, 0, 0) 100%) !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.vw-legacy-cp .btn.btn-default:hover {
+    background: gray !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.vw-legacy-cp .navbar {
+    background-color: white !important;
+    border-radius: 10px !important;
+    max-width: 1100px !important; 
+    width: 95% !important;
+    margin: 10px auto 25px auto !important; 
+    border: none !important;
+    display: block !important;
+}
+
+body.vw-legacy-cp .container-fluid {
+    max-width: 1100px !important;
+    width: 100% !important;
+    border-radius: 10px !important;
+    display: block !important;
+}
+
+body.vw-legacy-cp .wrap {
+    max-width: 1100px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+    max-height: 500px !important;
+}
+
+.panel {
+    border-radius: 10px !important;
+    margin-top: 25px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 0px !important;
+}
+
+.panel-body {
+    font-weight: bold;
+}
+
+.panel-footer {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: 2px #2e343b !important;
 }
 
 .info th {
     border: 0px !important;
-    border-color: none;
+}
+.info th:first-child { border-top-left-radius: 10px; }
+.info th:last-child { border-top-right-radius: 10px; }
+
+#table {
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+#table th:nth-child(1), #table td:nth-child(1) { width: 70px !important; }
+#table th:nth-child(2), #table td:nth-child(2) { width: 145px !important; white-space: nowrap !important; }
+#table th:nth-child(3), #table td:nth-child(3),
+#table th:nth-child(4), #table td:nth-child(4) { 
+    width: auto !important; 
+    white-space: nowrap !important; 
+}
+#table th:nth-child(5), #table td:nth-child(5) { width: 95px !important; text-align: center !important; white-space: nowrap !important; }
+#table th:nth-child(6), #table td:nth-child(6) { width: 190px !important; padding: 8px 10px !important; white-space: nowrap !important; text-align: right !important; }
+
+.pagination a {
+    background-color: #f3f3f3 !important;
+    border-color: #f3f3f3 !important;
+    color: gray !important;
 }
 
-.info th:first-child {
-    border-top-left-radius: 10px;
+.pagination li:first-child a,
+.pagination li:nth-child(2) a,
+.pagination li:last-child a,
+.pagination li:nth-last-child(2) a {
+    background-image: linear-gradient(to bottom,#f3f3f3 0,#f3f3f3 100%) !important;
+    border-color: #f3f3f3 !important;
 }
+.pagination li:first-child a { border-top-left-radius: 10px !important; border-bottom-left-radius: 10px !important; }
+.pagination li:last-child a { border-bottom-right-radius: 10px !important; border-top-right-radius: 10px !important; }
 
-.info th:last-child {
-    border-top-right-radius: 10px;
-}
 
-.btn.btn-warning {
-    background-image: linear-gradient(to bottom, #ad1010, rgb(179, 0, 0) 100%) !important;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn.btn-default:hover {
-    background: gray !important;
-    transition: background 0.3s ease, transform 0.2s ease;
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 800px !important;
+        max-width: 95vw !important;
+    }
 }
 
 .modal-header {
@@ -109,96 +193,648 @@ input.form-control {
     border: 0px !important;
 }
 
-.panel-body {
-    font-weight: bold;
-}
-
 .modal-footer {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
 }
 
-.btn-success {
-    border-radius: 5px !important;
-}
-
-.btn-info {
-    border-radius: 5px !important;
-}
-
-.btn-warning {
-    border: 0px !important;
-    border-radius: 5px !important;
-}
-
-.btn-default {
-    border: 0px !important;
-    text-shadow: none !important;
-    border-radius: 5px !important;
-    background: gray !important;
-    color: white !important;
-}
+.btn-success { border-radius: 5px !important; }
+.btn-warning { border: 0px !important; border-radius: 5px !important; }
+.btn-default { border: 0px !important; text-shadow: none !important; border-radius: 5px !important; background: gray !important; color: white !important; }
 
 #mr_ireason {
-    width: 252px !important;
+    flex-grow: 1 !important;
+    width: 10px !important;
+    margin-right: 12px !important;
+}
+#mr_itime {
+    margin-right: 8px !important;
+}
+.modal-footer > .btn {
+    margin-left: 4px !important;
+    margin-bottom: 0px !important; 
+}
+#dictResultBox {
+    width: 100% !important;
 }
 
-#textInput.form-control {
-    width: 270px !important;
-    display: inline;
+.status-indicator {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    margin-right: 6px;
+    vertical-align: middle;
+    transform: translateY(-1px);
+}
+.status-circle {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.status-circle.online {
+    background-color: #4CAF50;
+    animation: pulsate-online 2s infinite; 
+}
+.status-circle.offline {
+    background-color: #F44336;
+}
+@keyframes pulsate-online {
+    0% { box-shadow: 0 0 3px rgba(76, 175, 80, 0.5); }
+    50% { box-shadow: 0 0 8px rgba(76, 175, 80, 0.8), 0 0 12px rgba(76, 175, 80, 0.4); }
+    100% { box-shadow: 0 0 3px rgba(76, 175, 80, 0.5); }
 }
 
-
-.navbar {
-    border-radius: 10px !important;
-    display: flex;
-    align-content: center;
-    max-width: 900px !important;
-    margin-top: 10px !important;
-    margin: 0 auto;
+.status-indicator .tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    min-width: 80px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 8px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    font-weight: normal;
+    pointer-events: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.status-indicator .tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+.status-indicator:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
-.container-fluid {
-    border-radius: 10px !important;
+@keyframes pulsate-star {
+    0%, 100% { text-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 0 8px #d61753; }
+    50% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 16px #d61753, 0 0 24px #ff4d8a; }
 }
 
-.panel {
-    border-radius: 10px !important;
-    margin-top: 25px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    border: 0px !important;
+.developer-star {
+    cursor: help;
+    margin-right: 8px;
+    position: relative;
+    color: #d61753;
+    animation: pulsate-star 3.5s ease-in-out infinite;
 }
 
-.wrap {
-    border-radius: 10px !important;
-    max-height: 500px !important;
+.developer-star .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.panel-footer {
-    border-bottom-left-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
+.developer-star:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
+/* ========================================================
+   Universal VimeWorld Tool - Modern CP (cp.vimeworld.com)
+   ======================================================== */
 
-.pagination a {
-    background-color: #f3f3f3 !important;
-    border-color: #f3f3f3 !important;
-    color: gray !important;
+/* Full-width responsive layout for Staff sections */
+#root .container.mt-4 {
+    max-width: 98vw !important;
+    width: 98vw !important;
+    margin-top: 15px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
 }
 
-.pagination li:first-child a,
-.pagination li:nth-child(2) a,
-.pagination li:last-child a,
-.pagination li:nth-last-child(2) a {
-    background-image: linear-gradient(to bottom,#f3f3f3 0,#f3f3f3 100%) !important;
-    border-color: #f3f3f3 !important;
-}
-.pagination li:first-child a {
-    border-top-left-radius: 10px !important;
-    border-bottom-left-radius: 10px !important;
+#root .container.mt-4 > .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 16px !important;
 }
 
-.pagination li:last-child a {
-    border-bottom-right-radius: 10px !important;
-    border-top-right-radius: 10px !important;
+/* Side menu: expanded by 1.5x (~320px) to match standard width and avoid text wrapping */
+#root .container.mt-4 > .row > div:first-child {
+    flex: 0 0 320px !important;
+    max-width: 320px !important;
+    width: 320px !important;
+}
+
+#root .container.mt-4 > .row > div:first-child .card,
+#root .container.mt-4 > .row > div:first-child .bg-body {
+    padding: 14px 16px !important;
+}
+
+#root .container.mt-4 > .row > div:first-child .nav-link,
+#sidebar-offcanvas .nav-link {
+    white-space: nowrap !important;
+}
+
+/* Main content area narrowed to fit cleanly alongside the 320px sidebar */
+#root .container.mt-4 > .row > div:last-child {
+    flex: 1 1 calc(100% - 336px) !important;
+    max-width: calc(100% - 336px) !important;
+    width: calc(100% - 336px) !important;
+    min-width: 0 !important;
+}
+
+/* Table layout: action buttons fit cleanly without clipping */
+#root table.table {
+    width: 100% !important;
+    min-width: 100% !important;
+    table-layout: auto !important;
+}
+
+#root table.table tr[id^="row_report"] td:last-child,
+#root table.table td:has(button) {
+    white-space: nowrap !important;
+}
+
+#root table.table td button {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    margin-left: 4px !important;
+}
+
+/* Modal styling: wide, comfortable and scroll-free chat */
+.modal-dialog {
+    max-width: 960px !important;
+    width: 92vw !important;
+}
+
+.modal-body .bg-tertiary,
+.modal-body div.rounded.p-2 {
+    max-height: none !important;
+    overflow-y: visible !important;
+}
+
+/* Single-row horizontal table card for report info (Дата, Нарушитель, Отправитель, Повторов, Сервер) */
+.modal-body dl.row {
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: minmax(min-content, 1fr) !important;
+    gap: 4px 16px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 10px 16px !important;
+    margin-top: 6px !important;
+    margin-bottom: 14px !important;
+    align-items: center !important;
+    overflow-x: auto !important;
+}
+
+.modal-body dl.row > dt {
+    width: auto !important;
+    max-width: none !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 0 5px 0 !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    color: #8c9ba5 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    white-space: nowrap !important;
+}
+
+.modal-body dl.row > dd {
+    width: auto !important;
+    max-width: none !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 5px 0 0 0 !important;
+    font-size: 0.92rem !important;
+    color: #f1f3f5 !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+/* Navbar stacking context so dropdowns (e.g. Форум) are never occluded */
+.navbar,
+header.navbar,
+#root nav.navbar {
+    position: relative !important;
+    z-index: 1050 !important;
+}
+
+.dropdown-menu,
+.nav-item.dropdown .dropdown-menu {
+    z-index: 1070 !important;
+}
+
+/* Mute inputs row: narrow 95px minutes input, flexible reason, space for action buttons */
+.modal-body:has(> .row.g-2) {
+    padding-bottom: 0 !important;
+}
+
+.modal-body > .row.g-2 {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+    padding-right: 232px !important; /* Matches exactly the 224px buttons (108+8+108) + 8px gap */
+    margin-bottom: 0 !important;
+    height: 38px !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: none !important;
+    transition: margin-top 0.15s ease !important;
+}
+
+.modal-body > .row.g-2 > * {
+    pointer-events: auto !important;
+    margin: 0 !important;
+}
+
+/* When confirmation dialog is open, shift input row down to make 36px space for confirmation question */
+.modal-body:has(+ .modal-footer.justify-content-between) > .row.g-2,
+.modal-body:has(+ .modal-footer:has(button.btn-secondary)) > .row.g-2 {
+    margin-top: 36px !important;
+}
+
+/* Completely hide character limit counter (0/255 символов) so it never interferes */
+.modal-body > .row.g-2 .small,
+.modal-body > .row.g-2 div.small,
+.modal-body > .row.g-2 .text-body-secondary.small,
+.modal-body > .row.g-2 .text-danger.small {
+    display: none !important;
+}
+
+.modal-body > .row.g-2 > .col-sm-3,
+.modal-body > .row.g-2 > div:first-child {
+    flex: 0 0 95px !important;
+    max-width: 95px !important;
+    width: 95px !important;
+    margin-bottom: 0 !important;
+}
+
+.modal-body > .row.g-2 > .col-sm-9,
+.modal-body > .row.g-2 > div:last-child {
+    flex: 1 1 auto !important;
+    max-width: none !important;
+    width: auto !important;
+    margin-bottom: 0 !important;
+}
+
+/* Match mute inputs appearance to dictionary input (clean border, bright readable placeholder) */
+.modal-dialog input[placeholder*="Минут"],
+.modal-dialog input[placeholder*="Причина"],
+.modal-dialog input[type="number"],
+.modal-body .row.g-2 input,
+.modal-body input.form-control:not(#textInput) {
+    height: 38px !important;
+    margin-bottom: 0 !important;
+    background-color: #212529 !important;
+    border: 1px solid #495057 !important;
+    border-radius: 6px !important;
+    color: #f1f3f5 !important;
+    font-size: 0.95rem !important;
+    padding: 6px 12px !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.modal-dialog input[placeholder*="Минут"]::placeholder,
+.modal-dialog input[placeholder*="Причина"]::placeholder,
+.modal-dialog input[type="number"]::placeholder,
+.modal-body .row.g-2 input::placeholder,
+.modal-body input.form-control:not(#textInput)::placeholder {
+    color: #adb5bd !important;
+    opacity: 1 !important;
+}
+
+.modal-dialog input[placeholder*="Минут"]:focus,
+.modal-dialog input[placeholder*="Причина"]:focus,
+.modal-dialog input[type="number"]:focus,
+.modal-body .row.g-2 input:focus,
+.modal-body input.form-control:not(#textInput):focus {
+    background-color: #212529 !important;
+    border-color: #0d6efd !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+    outline: none !important;
+}
+
+/* Modal footer pulls action buttons up into the same row as mute time/reason */
+.modal-footer {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 8px !important;
+    border-top: none !important;
+    padding: 0 16px 16px 16px !important;
+    margin-top: -36px !important; /* Pixel-perfect vertical alignment with 38px inputs */
+    position: relative !important;
+    z-index: 20 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.modal-footer > * {
+    pointer-events: auto !important;
+}
+
+.modal-footer > button.btn-warning,
+.modal-footer > button.btn-danger,
+.modal-footer > div.d-flex > button {
+    height: 38px !important;
+    width: 108px !important;
+    min-width: 108px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+
+/* Кнопка мута - ЗЕЛЁНАЯ */
+.modal-dialog button.btn-danger,
+.modal-footer button.btn-danger,
+.modal-footer > button.btn-danger {
+    background-color: #28a745 !important;
+    background-image: none !important;
+    border: 1px solid #28a745 !important;
+    color: #ffffff !important;
+    order: 1 !important;
+    width: 108px !important;
+    min-width: 108px !important;
+    margin: 0 !important;
+}
+.modal-dialog button.btn-danger:hover,
+.modal-footer button.btn-danger:hover {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+    color: #ffffff !important;
+}
+
+/* Кнопка отклонить в модалке - КРАСНАЯ */
+.modal-dialog button.btn-warning,
+.modal-footer button.btn-warning,
+.modal-footer > button.btn-warning {
+    background-color: #dc3545 !important;
+    background-image: none !important;
+    border: 1px solid #dc3545 !important;
+    color: #ffffff !important;
+    order: 2 !important;
+    width: 108px !important;
+    min-width: 108px !important;
+    margin: 0 !important;
+}
+.modal-dialog button.btn-warning:hover,
+.modal-footer button.btn-warning:hover {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+    color: #ffffff !important;
+}
+
+/* Кнопка отклонить в таблице репортов - контурная красная под стиль кнопки 'Просмотр' */
+table.table button.btn-outline-warning {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: #dc3545 !important;
+    color: #dc3545 !important;
+}
+table.table button.btn-outline-warning:hover {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+}
+
+/* Confirmation dialog: question above inputs, buttons stay in-place on the right */
+.modal-footer.justify-content-between,
+.modal-footer:has(button.btn-secondary) {
+    margin-top: -36px !important;
+    padding: 0 16px 16px 16px !important;
+    border-top: none !important;
+    justify-content: flex-end !important;
+    position: relative !important;
+    z-index: 20 !important;
+    pointer-events: none !important;
+}
+
+.modal-footer.justify-content-between > span,
+.modal-footer:has(button.btn-secondary) > span {
+    position: absolute !important;
+    top: -34px !important;
+    left: 16px !important;
+    right: 16px !important;
+    height: 28px !important;
+    display: block !important;
+    line-height: 28px !important;
+    font-size: 0.95rem !important;
+    color: #f1f3f5 !important;
+    pointer-events: auto !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    z-index: 25 !important;
+}
+
+.modal-footer.justify-content-between > div.d-flex,
+.modal-footer:has(button.btn-secondary) > div.d-flex {
+    display: inline-flex !important;
+    gap: 8px !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: auto !important;
+}
+
+.modal-footer.justify-content-between > div.d-flex > button,
+.modal-footer:has(button.btn-secondary) > div.d-flex > button {
+    height: 38px !important;
+    width: 108px !important;
+    min-width: 108px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+}
+
+/* Secondary button (Отмена) */
+.modal-dialog button.btn-secondary,
+.modal-footer button.btn-secondary {
+    background-color: #6c757d !important;
+    background-image: none !important;
+    border: 1px solid #6c757d !important;
+    color: #ffffff !important;
+    height: 38px !important;
+    width: 108px !important;
+    min-width: 108px !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: auto !important;
+}
+.modal-dialog button.btn-secondary:hover,
+.modal-footer button.btn-secondary:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+    color: #ffffff !important;
+}
+
+/* Dictionary search container pinned at the bottom, below buttons and mute time/reason */
+#dictInputContainer {
+    margin: 12px 0 0 0 !important;
+    padding: 0 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    order: 10 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+#dictInputContainer .btn,
+#dictInputContainer input {
+    margin: 0 !important;
+}
+
+#dictInputContainer #textInput {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 140px !important;
+    height: 38px !important;
+}
+
+#dictInputContainer .btn {
+    height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+}
+
+#dictResultBox {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    order: 11 !important;
+    margin-top: 8px !important;
+}
+
+/* Wallpaper Frosted Glass styling for modern CP */
+body.has-custom-bg {
+    background-color: #121212 !important;
+}
+
+body.has-custom-bg #root {
+    background: transparent !important;
+}
+
+body.has-custom-bg .card {
+    background-color: rgba(33, 37, 41, 0.86) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.has-custom-bg .card-header {
+    background-color: rgba(25, 28, 32, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.has-custom-bg .navbar {
+    background-color: rgba(25, 28, 32, 0.88) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.has-custom-bg .list-group-item {
+    background-color: rgba(33, 37, 41, 0.75) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.has-custom-bg .table {
+    --bs-table-bg: transparent !important;
+}
+
+body.has-custom-bg .modal-content {
+    background-color: rgba(26, 29, 36, 0.94) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.has-custom-bg .modal-header {
+    background-color: rgba(20, 22, 28, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.has-custom-bg .modal-footer {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+body.has-custom-bg .modal-body .bg-tertiary {
+    background-color: rgba(18, 20, 24, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Modal messages full visible list without scrollbar */
+.modal-body .bg-tertiary,
+.modal-body div.rounded.p-2 {
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    padding: 6px 10px !important;
+}
+
+.modal-body .bg-tertiary > div {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 2px !important;
 }

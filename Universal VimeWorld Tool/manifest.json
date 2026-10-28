@@ -1,38 +1,69 @@
 {
-    "manifest_version": 3,
-    "name": "Universal VimeWorld Tool",
-    "version": "3.0",
-    "description": "Мощный инструмент с современным интерфейсом, поддержкой всех привилегий, тёмной и светлой темой, сотней фонов и калькулятором мутов и другими полезными функциями, созданными для удобства модерирующего персонала",
-    "permissions": ["storage", "scripting", "tabs", "activeTab"],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": [
-          "https://legacy-cp.vimeworld.com/*",
-          "https://forum.vimeworld.com/*",
-          "https://cp.vimeworld.com/*"
-        ],
-        "js": ["content.js"],
-        "css": ["legacy.css", "tooltip.css", "calculator.css"]
-      }
+  "manifest_version": 3,
+  "name": "Universal VimeWorld Tool",
+  "version": "5.0",
+  "description": "Мощный инструмент с современным интерфейсом, поддержкой всех привилегий и префиксов, тёмной и светлой темой, сотней фонов и возможностью поставить свой, встроенным словарем нарушений, калькулятором мутов, уведомлением о новых репортах, форумными шаблонами и другими полезными функциями с тонкой настройкой, созданными для удобства модерирующего персонала",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+    "activeTab",
+    "alarms", 
+    "offscreen",
+    "cookies"
+  ],
 
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": ["config.json", "background.txt"],
-        "matches": ["<all_urls>"]
-      }
-
-    ],
-    "icons": {
-      "16": "16.png",
-      "64": "64.png",
-      "128": "128.png"
+  "host_permissions": [
+    "https://cp.vimeworld.com/*",
+    "https://api.vimeworld.com/*",
+    "https://forum.vimeworld.com/*",
+    "https://legacy-cp.vimeworld.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cp.vimeworld.com/*",
+        "https://legacy-cp.vimeworld.com/*"
+      ],
+      "js": ["main_scroll.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://cp.vimeworld.com/*",
+        "https://forum.vimeworld.com/*",
+        "https://legacy-cp.vimeworld.com/*"
+      ],
+      "js": ["content.js", "navbars.js", "cp.js", "forum.js"],
+      "css": ["legacy.css", "tooltip.css", "calculator.css"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "main_scroll.js",
+        "emojis.json",
+        "config.json",
+        "backgrounds/*",
+        "offscreen.html", 
+        "offscreen.js",       
+        "notification.mp3",
+        "vimecalculator.png",
+        "templates.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "16.png",
+    "64": "64.png",
+    "128": "128.png"
   }
-  
+}
