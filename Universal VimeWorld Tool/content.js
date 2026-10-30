@@ -201,58 +201,7 @@ if (document.readyState === 'loading') {
     initBackground();
 }
 
-    chrome.storage.sync.get("isEnabled2", (data) => {
-        if (data.isEnabled2) {
-            const currentUrl = window.location.href;
-            if (!currentUrl.includes("forum.vimeworld.com") && !currentUrl.includes("cp.vimeworld.com")) {
-                document.body.style.setProperty("background-color", "#121212", "important")
 
-                const headers = document.querySelectorAll('.info th');
-
-                headers.forEach((header, index) => {
-                    header.style.backgroundColor = '#333333';
-                    header.style.color = '#b3b9c4';
-                    header.style.fontWeight = 'bold'; 
-                    header.style.borderColor = '#303030';
-                });
-
-                const style = document.createElement('style');
-                style.textContent = `
-                .panel { background-color: #212529 !important; border-color: #303030 !important; }
-                .pagination a { background-color: #3E3D3D !important; border-color: #3b3939 !important; }
-                .btn:hover { box-shadow: 0px 1px 10px 2px rgba(104, 103, 101, 0.356) !important; box-shadow: inset 0px -4px 15px 1px rgba(59, 59, 58, 0.411)!important; }
-                .pagination li:first-child a, .pagination li:nth-child(2) a, .pagination li:last-child a, .pagination li:nth-last-child(2) a { background-image: linear-gradient(to bottom,#3E3D3D 0,#3E3D3D 100%) !important; border-color: #3b3939 !important; }
-                .panel-heading { border-bottom: #303030 !important; }
-                .panel-heading h2 { color: #727d82 !important; }
-                .panel-body { color: #727d82 !important; background-color: #212529 !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.3); }
-                .panel-body a { color: white !important; }
-                .panel-footer { background-color: #212529 !important; border-top: #303030 !important; }
-                .navbar { display: flex; align-content: center; background-color: #212529 !important; border-color: #313131 !important; }
-                .container-fluid { background-color: #212529 !important; }
-                select.form-control:hover { background-color: #0e8b96; }
-                select.form-control:focus { outline: none; background-color: #0e8b96; }
-                input.form-control { background-color: rgb(62, 61, 61); color: #b3b9c4; }  
-                .modal-header { background-color: #212529 !important; border-bottom: 1px solid #303030 !important; color: white !important; }
-                .modal-body { background-color: #212529 !important; color: white !important; border-bottom: 1px solid #303030 !important; }
-                .modal-footer { border-top: 1px solid #303030 !important; margin-top: 0px !important; background-color: #212529 !important; color: white !important; }       
-                td { color: rgb(222, 226, 230); }
-                .table-hover>tbody>tr:hover>td,.table-hover>tbody>tr:hover>th { background-color: #3E3D3D !important; }
-                .table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover,.table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr.warning:hover>th { background-color: #baa7f7 !important; }
-                h5, h4 { color: rgb(179, 185, 196) !important; }
-                .success1:hover { background-color: #39385c; }
-                .btn-info { color: #b3b9c4; }
-                select.form-control { background-color: #12c3d3; color: white; }
-                .form-control, .form-control[disabled] { background-color: rgb(51,51,51,1) !important; border-color: rgb(51,51,51,0,7) !important; border: none !important; }
-                .info th { border-color: none; }
-                .btn.btn-default { background: linear-gradient(to bottom,#3a294a 0,#3a294a 100%) }
-                .btn.btn-default:hover { background: linear-gradient(to bottom,#3a294a 0,#3a294a 80%) }
-                .close { text-shadow: 0 1px 0 white !important; color: gray !important; }
-                `;
-
-                document.head.appendChild(style);
-            }
-        }
-    });
 
 function applyBackground(url) {
     if (!url) return;
@@ -269,7 +218,6 @@ function applyBackground(url) {
     s.setProperty("background-repeat", "no-repeat", "important");
     s.setProperty("background-position", "center center", "important");
     s.setProperty("background-attachment", "fixed", "important");
-    s.setProperty("background-color", "#121212", "important");
     document.body.classList.add("has-custom-bg");
 }
 
@@ -1404,82 +1352,39 @@ observer.observe(document.body, {
 });
 
 function rowClass() {
-    chrome.storage.sync.get("isEnabled2", (data) => {
-        const currentUrl = window.location.href;
-        if (currentUrl.includes("forum.vimeworld.com")) return;
+    const currentUrl = window.location.href;
+    if (currentUrl.includes("forum.vimeworld.com")) return;
 
-        const table = document.getElementById('table') || document.querySelector('table.table');
-        if (table) {
-            table.classList.remove("table-hover");
-        }
+    const table = document.getElementById('table') || document.querySelector('table.table');
+    if (table) {
+        table.classList.remove("table-hover");
+    }
 
-        const oldStyle = document.getElementById("custom-row-style");
-        if (oldStyle) oldStyle.remove();
-
+    if (!document.getElementById("custom-row-style")) {
         const style = document.createElement('style');
         style.id = "custom-row-style";
-
-        const rows = document.querySelectorAll('tr[id^="row_report"], table.table tbody tr');
-
-        if (data.isEnabled2) {
-            // Тёмная тема
-            if (currentUrl.includes("legacy-cp")) {
-                document.body.style.setProperty("background-color", "#121212", "important");
+        style.textContent = `
+            .custom_warning, tr.custom_warning td {
+                background-color: rgba(226, 223, 40, 0.18) !important;
             }
-
-            style.textContent = `
-                .custom_warning, tr.custom_warning td {
-                    background-color: rgba(226, 223, 40, 0.18) !important;
-                }
-                .custom_success, tr.custom_success td {
-                    background-color: rgba(40, 226, 124, 0.18) !important;
-                }
-                .custom_danger, tr.custom_danger td {
-                    background-color: rgba(255, 105, 105, 0.18) !important;
-                }
-            `;
-
-            document.head.appendChild(style);
-
-            rows.forEach(row => {
-                if (row.classList.contains("warning") || row.querySelector('.text-bg-warning')) {
-                    row.classList.add("custom_warning");
-                } else if (row.classList.contains("success") || row.querySelector('.text-bg-success')) {
-                    row.classList.add("custom_success");
-                } else if (row.classList.contains("danger") || row.querySelector('.text-bg-danger')) {
-                    row.classList.add("custom_danger");
-                }
-            });
-
-        } else {
-            // Светлая тема
-            if (currentUrl.includes("legacy-cp")) {
-                document.body.style.setProperty("background-color", "#ffffff", "important");
+            .custom_success, tr.custom_success td {
+                background-color: rgba(40, 226, 124, 0.18) !important;
             }
+            .custom_danger, tr.custom_danger td {
+                background-color: rgba(255, 105, 105, 0.18) !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
 
-            style.textContent = `
-                .warning, .warning td, tr.custom_warning td {
-                    background-color: rgba(226, 223, 40, 0.18) !important;
-                }
-                .success, .success td, tr.custom_success td {
-                    background-color: rgba(40, 226, 124, 0.18) !important;
-                }
-                .danger, .danger td, tr.custom_danger td {
-                    background-color: rgba(255, 105, 105, 0.18) !important;
-                }
-            `;
-
-            document.head.appendChild(style);
-
-            rows.forEach(row => {
-                if (row.classList.contains("custom_warning") || row.querySelector('.text-bg-warning')) {
-                    row.classList.add("custom_warning");
-                } else if (row.classList.contains("custom_success") || row.querySelector('.text-bg-success')) {
-                    row.classList.add("custom_success");
-                } else if (row.classList.contains("custom_danger") || row.querySelector('.text-bg-danger')) {
-                    row.classList.add("custom_danger");
-                }
-            });
+    const rows = document.querySelectorAll('tr[id^="row_report"], table.table tbody tr');
+    rows.forEach(row => {
+        if (row.classList.contains("warning") || row.querySelector('.text-bg-warning')) {
+            row.classList.add("custom_warning");
+        } else if (row.classList.contains("success") || row.querySelector('.text-bg-success')) {
+            row.classList.add("custom_success");
+        } else if (row.classList.contains("danger") || row.querySelector('.text-bg-danger')) {
+            row.classList.add("custom_danger");
         }
     });
 }
@@ -2664,19 +2569,36 @@ try {
   `;
   document.head.appendChild(calcStyle);
 
-  chrome.storage.sync.get({ isEnabled2: true }, (data) => {
-    // темная тема
-    if (!data.isEnabled2) {
-      const style = document.createElement("style");
-      style.textContent = `
-        #muteCalcPanel { background: #ffffff !important; color: #000 !important; }
-        .muteCalcInput { background: #f9f9f9 !important; border: 1px solid #ccc !important; color: #000 !important; }
-        #muteCalcPanel button[data-capped="true"] { background: #b86e00a4 !important; }
-        #muteCalcPanel button[data-tooltip]:hover::after { background: #555 !important; color: #fff !important; }
-      `;
-      document.head.appendChild(style);
+  function updateCalcTheme(isDark) {
+    let style = document.getElementById("mute-calc-light-theme");
+    if (!isDark) {
+      if (!style) {
+        style = document.createElement("style");
+        style.id = "mute-calc-light-theme";
+        style.textContent = `
+          #muteCalcPanel { background: #ffffff !important; color: #000 !important; }
+          .muteCalcInput { background: #f9f9f9 !important; border: 1px solid #ccc !important; color: #000 !important; }
+          #muteCalcPanel button[data-capped="true"] { background: #b86e00a4 !important; }
+          #muteCalcPanel button[data-tooltip]:hover::after { background: #555 !important; color: #fff !important; }
+        `;
+        document.head.appendChild(style);
+      }
+    } else {
+      if (style) style.remove();
     }
+  }
+
+  chrome.storage.sync.get({ isEnabled2: true }, (data) => {
+    updateCalcTheme(data.isEnabled2);
   });
+
+  if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.onChanged) {
+    chrome.storage.onChanged.addListener((changes) => {
+      if (changes.isEnabled2 !== undefined) {
+        updateCalcTheme(changes.isEnabled2.newValue);
+      }
+    });
+  }
 
   // Кнопка открытия
   const toggle = document.createElement("button");
@@ -2962,6 +2884,7 @@ try {
     ["Flood", 60, "flood"],
     ["Flood символами", 60, "flood"],
     ["Caps Lock", 60],
+    ["Голосование", 60],
     ["Мат/Аморал", 120, "mat"],
     ["Оскорбление игроков", 240, "osk"],
     ["Оскорбление игроков + Мат", 360, "matosk"],
@@ -2979,6 +2902,7 @@ try {
     ["Политическая агитация", 2880],
     ["Обман игроков", 240],
     ["Призыв к суициду", 240],
+    ["Провокация игроков", 43200],
     ["Продажа вимеров", 21600],
     ["Покупка вимеров", 21600],
     ["Продажа услуг за вимеры", 21600],
@@ -2990,7 +2914,6 @@ try {
     ["Передача аккаунта", 1440, null, true],
     ["Пропаганда наркотиков", 1440, null, true],
     ["Пропаганда фашизма", 1440, null, true],
-    ["Провокация игроков", 1440, null, true],
     ["Распространение читов", 1440, null, true],
     ["Распространение багов", 1440, null, true],
   ];
@@ -3226,7 +3149,8 @@ try {
           setTimeout(() => {
                 messagesContainer.innerHTML = "";
 
-                const isDark = settings.isEnabled2;
+                const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark' ||
+                               window.matchMedia('(prefers-color-scheme: dark)').matches;
                 const badgeBg = isDark ? "#3e3d3d" : "#e9ecef";
                 const badgeColor = isDark ? "#b3b9c4" : "#495057";
                 const badgeBorder = isDark ? "#4a4a4a" : "#ced4da";

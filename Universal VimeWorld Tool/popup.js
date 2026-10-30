@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.sync.get(
     { 
       isEnabled: false, 
-      isEnabled2: false, 
+      isEnabled2: true, 
       isEnabled3: true,
       isNotifsEnabled: false,
       isAutoReloadEnabled: false, 

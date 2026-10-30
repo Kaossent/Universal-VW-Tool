@@ -1,105 +1,5 @@
-chrome.storage.sync.get("isEnabled2", (data) => {
+(function() {
     const currentUrl = window.location.href;
-
-    if (data.isEnabled2 && !currentUrl.includes("forum.vimeworld.com")) {
-
-        document.body.style.setProperty("background-color", "#121212", "important");
-
-        const darkThemeStyle = document.createElement('style');
-        darkThemeStyle.textContent = `
-            .navbar.navbar-default .nav.navbar-nav > li > a,
-            .navbar-default .navbar-nav > .dropdown > a .caret {
-                color: #dee2e6 !important;
-                border-top-color: #dee2e6 !important; 
-                border-bottom-color: #dee2e6 !important;
-            }
-            .navbar.navbar-default .navbar-toggle .icon-bar {
-                background-color: #dee2e6 !important;
-            }
-
-            .navbar.navbar-default .navbar-brand {
-                color: #ffffff !important;
-            }
-
-            .navbar.navbar-default .nav.navbar-nav > li > a:hover,
-            .navbar-default .navbar-nav > .dropdown > a:hover .caret {
-                color: #484e51ff !important;
-                border-top-color: #484e51ff !important;
-                border-bottom-color: #484e51ff !important;
-            }
-
-            .navbar.navbar-default .nav.navbar-nav > li.active > a,
-            .navbar.navbar-default .nav.navbar-nav > li.active > a:hover {
-                color: #ffffff !important; 
-            }
-            
-            .navbar.navbar-default.navbar-static-top {
-                background-color: #1e1e1e !important;
-                border-bottom: 1px solid #333 !important;
-            }
-
-            .navbar.navbar-default .nav.navbar-nav > li:not(.active) > a:hover {
-                background-color: transparent !important;
-            }
-
-            .navbar.navbar-default .nav.navbar-nav > .open > a,
-            .navbar.navbar-default .nav.navbar-nav > .open > a:hover,
-            .navbar.navbar-default .nav.navbar-nav > .open > a:focus {
-                background-color: #333333 !important;
-            }
-            
-            .dropdown-menu {
-                background-color: #333333 !important;
-                border: 1px solid #333 !important;
-            }
-            .dropdown-menu > li > a {
-                color: #ffffffa6 !important;
-            }
-            .dropdown-menu > li > a:hover {
-                background-color: #333 !important; 
-                color: #ffffff !important;
-            }
-            .dropdown-menu .divider {
-                background-color: #333 !important;
-            }
-
-            .navbar.navbar-default .navbar-toggle {
-                border-color: rgba(255,255,255,.1) !important;
-            }
-
-            .navbar-brand {
-                 color: #ffffff !important;
-            }
-
-            a.nav-link {
-                color: #dee2e6;
-            }
-
-            a.nav-link.active {
-                color: #ffffff !important;
-            }
-            
-            a.nav-link:hover {
-                color: #ffffff;
-            }
-        `;
-        document.head.appendChild(darkThemeStyle);
-    }
-    else if (!data.isEnabled2 && !currentUrl.includes("forum.vimeworld.com")) {
-
-        if (currentUrl.includes("legacy-cp.vimeworld.com/moder/reports") || currentUrl.includes("legacy-cp.vimeworld.com/moder/usernames")) {
-            const lightThemeProfileStyle = document.createElement('style');
-            lightThemeProfileStyle.textContent = `
-                #top_servers_btn, 
-                #top_servers_btn .caret {
-                    color: #777 !important;
-                    border-top-color: #777 !important;
-                    border-bottom-color: #777 !important;
-                }
-            `;
-            document.head.appendChild(lightThemeProfileStyle);
-        }
-    }
 
     if (!currentUrl.includes("forum.vimeworld.com")) {
         
@@ -149,12 +49,6 @@ chrome.storage.sync.get("isEnabled2", (data) => {
         }
         else if (currentUrl.includes("cp.vimeworld.com") && !currentUrl.includes("legacy-cp.vimeworld.com")) {
              structuralStyle.textContent = `
-
-                .navbar-nav a.nav-link {
-                     font-family: Arial, Helvetica, sans-serif !important;
-                     font-size: 13px !important;
-                }
-
                 a.nav-link.active {
                     border-radius: 10px !important;
                     background-color: #2196f3 !important;
@@ -162,9 +56,27 @@ chrome.storage.sync.get("isEnabled2", (data) => {
                     font-weight: bold !important;
                 }
 
+                #vw-forum-dropdown-wrapper {
+                    position: relative !important;
+                    display: inline-flex !important;
+                    align-items: center !important;
+                    z-index: 1060 !important;
+                }
+
+                #vw-forum-dropdown-menu {
+                    position: absolute !important;
+                    top: 100% !important;
+                    left: 0 !important;
+                    z-index: 1070 !important;
+                    margin-top: 0.25rem !important;
+                }
+
                 .navbar-nav .dropdown-menu .dropdown-item {
-                     font-family: Arial, Helvetica, sans-serif !important;
                      font-size: 13px !important;
+                }
+
+                .dropdown-menu.show {
+                     display: block !important;
                 }
              `;
         }
@@ -284,28 +196,45 @@ chrome.storage.sync.get("isEnabled2", (data) => {
         }
 
         if (currentUrl.includes("cp.vimeworld.com") && !currentUrl.includes("legacy-cp.vimeworld.com")) {
+            function setupModernCpNavbar() {
+                try {
+                    const url = window.location.href;
+                    if (!url.includes("cp.vimeworld.com") || url.includes("legacy-cp.vimeworld.com")) return;
 
-            const modifyNavInterval = setInterval(() => {
-                const navContainer = document.querySelector(".flex-grow-1.navbar-nav");
-                if (navContainer) {
+                    const navContainer = document.querySelector('.navbar-nav.flex-grow-1, .flex-grow-1.navbar-nav, header .navbar-nav, nav .navbar-nav');
+                    if (!navContainer) return;
 
-                    const forumLink = navContainer.querySelector('a.nav-link[href="https://forum.vimeworld.com"]');
+                    // 1. Forum dropdown
+                    const forumLink = navContainer.querySelector('a.nav-link[href*="forum.vimeworld.com"]:not([href*="/forum/139"])') ||
+                                      Array.from(navContainer.querySelectorAll('a')).find(a => {
+                                          if (a.closest && a.closest('.dropdown-menu')) return false;
+                                          const text = (a.textContent || '').trim().toLowerCase();
+                                          const href = (a.getAttribute('href') || '').toLowerCase();
+                                          return (text === 'форум' || href === 'https://forum.vimeworld.com' || href === 'https://forum.vimeworld.com/') && !href.includes('/forum/139');
+                                      });
 
-                    if (forumLink && !forumLink.classList.contains('dropdown-toggle')) {
-                        clearInterval(modifyNavInterval);
-
-                        const dropdownWrapper = document.createElement('div');
+                    if (forumLink && !forumLink.classList.contains('dropdown-toggle') && !document.getElementById('vw-forum-dropdown-wrapper')) {
+                        const isParentLi = forumLink.parentElement && forumLink.parentElement.tagName === 'LI';
+                        const dropdownWrapper = document.createElement(isParentLi ? 'li' : 'div');
                         dropdownWrapper.className = 'nav-item dropdown';
+                        dropdownWrapper.id = 'vw-forum-dropdown-wrapper';
+                        dropdownWrapper.style.position = 'relative';
+                        dropdownWrapper.style.zIndex = '1060';
+                        dropdownWrapper.style.display = 'inline-flex';
+                        dropdownWrapper.style.alignItems = 'center';
 
                         forumLink.classList.add('dropdown-toggle');
                         forumLink.id = 'forum-dropdown';
                         forumLink.setAttribute('role', 'button');
                         forumLink.setAttribute('aria-expanded', 'false');
+                        forumLink.setAttribute('data-bs-toggle', 'dropdown');
                         forumLink.href = '#';
 
                         const dropdownMenu = document.createElement('ul');
                         dropdownMenu.className = 'dropdown-menu';
+                        dropdownMenu.id = 'vw-forum-dropdown-menu';
                         dropdownMenu.setAttribute('aria-labelledby', 'forum-dropdown');
+                        dropdownMenu.style.zIndex = '1070';
                         dropdownMenu.innerHTML = `
                             <li><a class="dropdown-item" href="https://forum.vimeworld.com" target="_blank">Главная форума</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -323,10 +252,9 @@ chrome.storage.sync.get("isEnabled2", (data) => {
                             event.preventDefault();
                             event.stopPropagation();
 
-                            const menu = dropdownWrapper.querySelector('.dropdown-menu');
-                            menu.classList.toggle('show');
-                            const isExpanded = menu.classList.contains('show');
-                            forumLink.setAttribute('aria-expanded', isExpanded);
+                            const isShown = dropdownMenu.classList.contains('show');
+                            dropdownMenu.classList.toggle('show');
+                            forumLink.setAttribute('aria-expanded', !isShown ? 'true' : 'false');
                         });
 
                         window.addEventListener('click', (event) => {
@@ -335,12 +263,12 @@ chrome.storage.sync.get("isEnabled2", (data) => {
                                 forumLink.setAttribute('aria-expanded', 'false');
                             }
                         });
+                    }
 
-                        dropdownWrapper.style.position = 'relative';
-                        dropdownWrapper.style.zIndex = '1060';
-                        dropdownMenu.style.zIndex = '1070';
-
+                    // 2. Dictionary link ("Словарь")
+                    if (!document.getElementById('vw-dictionary-nav-link')) {
                         const dictionaryLink = document.createElement('a');
+                        dictionaryLink.id = 'vw-dictionary-nav-link';
                         dictionaryLink.href = "https://docs.google.com/spreadsheets/d/1nbhO0hBGmN9WvAoc-pUEDsCTtTPxG8TNj1EM5uRAKPY/edit?gid=0#gid=0";
                         dictionaryLink.className = 'nav-link';
                         dictionaryLink.textContent = 'Словарь';
@@ -349,12 +277,17 @@ chrome.storage.sync.get("isEnabled2", (data) => {
 
                         navContainer.appendChild(dictionaryLink);
                     }
+                } catch (e) {
+                    console.error('[Universal VW Tool] Error setting up modern CP navbar:', e);
                 }
-            }, 200);
+            }
 
-            setTimeout(() => clearInterval(modifyNavInterval), 10000);
-            
+            setInterval(setupModernCpNavbar, 300);
+            setupModernCpNavbar();
+            document.addEventListener('DOMContentLoaded', setupModernCpNavbar);
+            window.addEventListener('popstate', setupModernCpNavbar);
         }
         
     }
-});
+
+})();

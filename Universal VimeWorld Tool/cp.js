@@ -204,6 +204,24 @@ function findOrCreateDlRow(dl, term) {
   return createDlRow(dl, term, '');
 }
 
+function isThemeLight() {
+    const htmlTheme = document.documentElement.getAttribute('data-bs-theme');
+    const bodyTheme = document.body.getAttribute('data-bs-theme');
+    if (htmlTheme === 'light' || bodyTheme === 'light') return true;
+    if (htmlTheme === 'dark' || bodyTheme === 'dark') return false;
+
+    const card = document.querySelector('.card') || document.body;
+    if (card) {
+        const bg = window.getComputedStyle(card).backgroundColor;
+        const rgb = bg.match(/\d+/g);
+        if (rgb && rgb.length >= 3) {
+            const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+            return brightness > 130;
+        }
+    }
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+}
+
 /**
  * @param {number} level 
  * @returns {number} 
@@ -385,13 +403,17 @@ async function fetchAndInjectInfo(nickname, dlElement, nickDd) {
             expStartEl.style.marginRight = '10px';
             expStartEl.textContent = level; 
 
+            const isLight = isThemeLight();
+
             const progressBarContainer = document.createElement('div');
+            progressBarContainer.className = 'vw-level-progressbar';
             progressBarContainer.style.flexGrow = '1'; 
             progressBarContainer.style.position = 'relative'; 
-            progressBarContainer.style.backgroundColor = '#2b2b2b';
+            progressBarContainer.style.backgroundColor = isLight ? '#e9ecef' : '#2b2b2b';
             progressBarContainer.style.borderRadius = '25px';
             progressBarContainer.style.height = '20px';
-            progressBarContainer.style.border = '2px solid #222';
+            progressBarContainer.style.border = isLight ? '1px solid #ced4da' : '2px solid #222';
+            progressBarContainer.style.boxShadow = isLight ? 'inset 0 1px 2px rgba(0,0,0,0.08)' : 'inset 0 1px 3px rgba(0,0,0,0.5)';
             progressBarContainer.style.cursor = 'pointer'; 
             
             const progressBarFill = document.createElement('div');
@@ -406,6 +428,7 @@ async function fetchAndInjectInfo(nickname, dlElement, nickDd) {
             progressBarFill.style.zIndex = '1'; 
 
             const expCurrentEl = document.createElement('div');
+            expCurrentEl.className = 'vw-level-percent';
             expCurrentEl.style.position = 'absolute';
             expCurrentEl.style.top = '0';
             expCurrentEl.style.left = '0';
@@ -417,7 +440,8 @@ async function fetchAndInjectInfo(nickname, dlElement, nickDd) {
             expCurrentEl.style.fontWeight = 'bold';
             expCurrentEl.style.fontSize = '0.8rem';
             expCurrentEl.style.zIndex = '2'; 
-            expCurrentEl.style.textShadow = '0 0 3px rgba(0,0,0,0.7)'; 
+            expCurrentEl.style.color = isLight ? '#212529' : '#ffffff';
+            expCurrentEl.style.textShadow = isLight ? '0 0 2px rgba(255,255,255,0.9)' : '0 0 3px rgba(0,0,0,0.8)'; 
             expCurrentEl.textContent = `${displayPercent}%`;
 
             const expTotalEl = document.createElement('span');
@@ -431,7 +455,9 @@ async function fetchAndInjectInfo(nickname, dlElement, nickDd) {
             tooltipEl.style.visibility = 'hidden';
             tooltipEl.style.opacity = '0';
             tooltipEl.style.transition = 'opacity 0.2s ease, visibility 0.2s ease';
-            tooltipEl.style.backgroundColor = '#2b2b2b';
+            tooltipEl.style.backgroundColor = '#212529';
+            tooltipEl.style.color = '#ffffff';
+            tooltipEl.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
             tooltipEl.style.padding = '5px 10px';
             tooltipEl.style.borderRadius = '4px';
             tooltipEl.style.fontSize = '0.85rem';
@@ -452,7 +478,7 @@ async function fetchAndInjectInfo(nickname, dlElement, nickDd) {
             tooltipArrow.style.height = '0';
             tooltipArrow.style.borderLeft = '5px solid transparent';
             tooltipArrow.style.borderRight = '5px solid transparent';
-            tooltipArrow.style.borderTop = '5px solid #2b2b2b';
+            tooltipArrow.style.borderTop = '5px solid #212529';
 
             tooltipEl.appendChild(tooltipArrow);
             progressBarContainer.appendChild(tooltipEl);

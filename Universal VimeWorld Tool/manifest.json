@@ -1,18 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Universal VimeWorld Tool",
-  "version": "5.0",
+  "version": "4.0",
   "description": "Мощный инструмент с современным интерфейсом, поддержкой всех привилегий и префиксов, тёмной и светлой темой, сотней фонов и возможностью поставить свой, встроенным словарем нарушений, калькулятором мутов, уведомлением о новых репортах, форумными шаблонами и другими полезными функциями с тонкой настройкой, созданными для удобства модерирующего персонала",
   "permissions": [
     "storage",
     "scripting",
     "tabs",
     "activeTab",
-    "alarms", 
+    "alarms",
     "offscreen",
     "cookies"
   ],
-
   "host_permissions": [
     "https://cp.vimeworld.com/*",
     "https://api.vimeworld.com/*",
@@ -31,7 +30,9 @@
         "https://cp.vimeworld.com/*",
         "https://legacy-cp.vimeworld.com/*"
       ],
-      "js": ["main_scroll.js"],
+      "js": [
+        "main_scroll.js"
+      ],
       "world": "MAIN",
       "run_at": "document_start"
     },
@@ -41,8 +42,17 @@
         "https://forum.vimeworld.com/*",
         "https://legacy-cp.vimeworld.com/*"
       ],
-      "js": ["content.js", "navbars.js", "cp.js", "forum.js"],
-      "css": ["legacy.css", "tooltip.css", "calculator.css"]
+      "js": [
+        "content.js",
+        "navbars.js",
+        "cp.js",
+        "forum.js"
+      ],
+      "css": [
+        "legacy.css",
+        "tooltip.css",
+        "calculator.css"
+      ]
     }
   ],
   "web_accessible_resources": [
@@ -52,13 +62,15 @@
         "emojis.json",
         "config.json",
         "backgrounds/*",
-        "offscreen.html", 
-        "offscreen.js",       
+        "offscreen.html",
+        "offscreen.js",
         "notification.mp3",
         "vimecalculator.png",
         "templates.json"
       ],
-      "matches": ["<all_urls>"]
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ],
   "icons": {
